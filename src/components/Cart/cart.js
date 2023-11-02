@@ -1,23 +1,22 @@
-import classes from "./CartItem.module.css";
+import Modal from '.../UI/Modal';
+import classes from './Cart.module.css'
+const Cart = props => {
+   const cartItems= <ul className={classes['cart-item']}>[{id: 'c1', name:'Sushi', amount: 2, price:12.99},
+].map((item) => <li>{item.name}</li>)</ul>;
+    return(
 
-const CartItem = (props) => {
-  const price = `$${props.price.toFixed(2)}`;
-
-  return (
-    <li className={classes["cart-item"]}>
-      <div>
-        <h2>{props.name}</h2>
-        <div className={classes.summary}>
-          <span className={classes.price}>{price}</span>
-          <span className={classes.amount}>x {props.amount}</span>
-        </div>
-      </div>
-      <div className={classes.actions}>
-        <button onClick={props.onRemove}>−</button>
-        <button onClick={props.onAdd}>+</button>
-      </div>
-    </li>
-  );
+        <Modal onClose={props.onClose}>
+           {cartitems}
+            <div>
+                <span>Total Amount</span>
+                <span>35.62</span>
+            </div>
+            <div className={classes.action}>
+                <button className={classes['button--alt']} onclick={props.onClose}>close</button>
+                <button className={classes.button}>order</button>
+            </div>
+        </Modal>
+    );
 };
 
-export default CartItem;
+export default Cart;
