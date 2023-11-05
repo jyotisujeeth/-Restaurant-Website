@@ -11,6 +11,7 @@ const removeItemFromCartHandler = id => {};
       totalAmount: 0,
       addItem: addItemToCartHandler,
       removeItem: removeItemFromCartHandler,
+      message: "i am acessable cart"
     };
 
 
