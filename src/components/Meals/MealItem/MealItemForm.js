@@ -1,8 +1,18 @@
 import Input from "../../UI/Input";
 import classes from "./MealItemForm.module.css";
+import React, { useContext } from "react";
 
 const MealItemForm = (props) => {
-  return (
+
+  const addItemToCart = (event) => {
+    event.target.value();
+// update the cartcntx items
+console.log(event.target.value);
+
+
+
+};
+    return (
     <form className={classes.form}>
       <Input
         label="Amount"
